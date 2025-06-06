@@ -729,7 +729,7 @@
 
 ### Random Dev Quote
 
-[![Random Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&card_width=500&card_height=400)](./RANDOM-DEV-QUOTE)
+[![Random Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&card_width=500&card_height=600)](./RANDOM-DEV-QUOTE)
 
 [(Back to top)](#table-of-contents)
 
