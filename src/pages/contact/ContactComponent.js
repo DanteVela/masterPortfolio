@@ -46,6 +46,7 @@ class Contact extends Component {
                 <SocialMedia theme={theme} />
                 <div className="resume-btn-div">
                   <Button
+                    // This is the Text for a Button that links to my Resume
                     text="See My Resume"
                     newTab={true}
                     href={greeting.resumeLink}
@@ -69,7 +70,8 @@ class Contact extends Component {
                 </p>
                 <div className="blogsite-btn-div">
                   <Button
-                    text="Visit My Blogsite"
+                    // This is the Text for a Button that links to a website
+                    text="Visit My LinkedIn"
                     newTab={true}
                     href={blogSection.link}
                     theme={theme}
@@ -121,7 +123,9 @@ class Contact extends Component {
                 </p>
                 <div className="address-btn-div">
                   <Button
-                    text="Visit on Google Maps"
+                    // This is the Text for a Button that links to contact methods including an address
+                    text="Send Me a Message"
+                    // text="Visit on Google Maps"
                     newTab={true}
                     href={addressSection.location_map_link}
                     theme={theme}

@@ -55,6 +55,7 @@ class Projects extends Component {
           })}
         </div>
         <Button
+          // This is the Text for a Button that links to my GitHub Projects
           text={"More Projects"}
           className="project-button"
           href={greeting.githubProfile}

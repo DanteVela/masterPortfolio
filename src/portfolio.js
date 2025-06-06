@@ -1,39 +1,49 @@
-/* Change this file to get your personal Porfolio */
+/* Change this file to get your Personal Porfolio */
 
-// Website related settings
+// Website Related settings
+// This is the Intro Loading screen before the Home Page such as a Splash screen
 const settings = {
-  isSplash: true, // Change this to false if you don't want Splash screen.
+  isSplash: false, // Change to false if you don't want Splash screen | Change to true if you want Splash screen
 };
 
-//SEO Related settings
+// Search Engine Optimization Related settings
 const seo = {
-  title: "Ashutosh's Portfolio",
+  title: "Dante Vela's Portfolio",
   description:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+    "A software engineer specializing in website development combines innovative design with robust coding practices to build secure, responsive, and user-centric digital experiences.",
   og: {
-    title: "Ashutosh Hathidara Portfolio",
+    title: "Dante Vela Portfolio",
     type: "website",
-    url: "http://ashutoshhathidara.com/",
+    url: "http://DanteVela.com/", // ***Maybe change URL Name Later?***
+    // url: "http://ashutoshhathidara.com/",
   },
 };
 
-//Home Page
+// Home Page
+// -----------------------------------------------------------------------------------------------------------------------------
+// "This is the 1st Page that loads in after the Splash screen"
 const greeting = {
-  title: "Ashutosh Hathidara",
-  logo_name: "AshutoshHathidara",
-  nickname: "layman_brother",
+  title: "Dante Vela", // Intro Page & Made by "Name"
+  logo_name: "Dante Vela", // Cursive Name Logo
+  nickname: "IT Specialist | Programmer", // Nickname or Status
   subTitle:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+    "A software engineer specializing in website development who combines innovative design with robust coding practices to build secure, responsive, and user-centric digital experiences.",
   resumeLink:
-    "https://drive.google.com/file/d/1bXRknv_h-XI_3CQ3SGPteGODtvEb7YvI/view?usp=sharing",
-  portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
-  githubProfile: "https://github.com/ashutosh1919",
+    // When the [See my Resume] Button is clicked in the [Contact Me] Page, it will take the user to the Resume
+    "https://1drv.ms/b/c/7604ad3657907d92/EURpaZg0X0RGhK_vGdVEcEEBu2S89HFxF70qzKOGNsoLsA?e=layZOJ",
+  // "https://drive.google.com/file/d/1bXRknv_h-XI_3CQ3SGPteGODtvEb7YvI/view?usp=sharing",
+  portfolio_repository: "https://github.com/DanteVela/masterPortfolio",
+  githubProfile: "https://github.com/DanteVela",
 };
 
+// Social Media Links for the [Home Page] and [Contact Me Page]
+// Clicking on the Icons will take the user to the respective Social Media sites
 const socialMediaLinks = [
-  /* Your Social Media Link */
-  // github: "https://github.com/ashutosh1919",
-  // linkedin: "https://www.linkedin.com/in/ashutosh-hathidara-88710b138/",
+  /* Social Media Links */
+  // github: "https://github.com/DanteVela",
+  // linkedin: "https://www.linkedin.com/in/dante-vela-544284192/",
+  // outlook: "dante.vela@outlook.com",
+
   // gmail: "ashutoshhathidara98@gmail.com",
   // gitlab: "https://gitlab.com/ashutoshhathidara98",
   // facebook: "https://www.facebook.com/laymanbrother.19/",
@@ -42,16 +52,25 @@ const socialMediaLinks = [
 
   {
     name: "Github",
-    link: "https://github.com/ashutosh1919",
+    link: "https://github.com/DanteVela",
     fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
     backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/ashutosh1919/",
+    link: "https://www.linkedin.com/in/dante-vela-544284192/",
     fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
-    backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
+    backgroundColor: "#005FF9", // Reference https://simpleicons.org/?q=linkedin
   },
+  {
+    // Microsoft Logo is a substitute for Outlook Email Icon
+    name: "Outlook",
+    link: "mailto:dante.vela@outlook.com",
+    fontAwesomeIcon: "fa-microsoft", // Reference https://fontawesome.com/icons/google?style=brands
+    backgroundColor: "#004788", // Reference https://simpleicons.org/?q=gmail
+    // backgroundColor: "transparent", (Icon appears white until mouse hovers over it)
+  },
+  /*
   {
     name: "YouTube",
     link: "https://youtube.com/c/DevSense19",
@@ -82,19 +101,73 @@ const socialMediaLinks = [
     fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
     backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
   },
+  */
 ];
 
+// Home Page - [Skills Section]
+// -----------------------------------------------------------------------------------------------------------------------------
+// BackgroundColor is needed for specific logos with only letters
+// Use "black" or "white" to test for Background and Logo compatibility colors
 const skills = {
   data: [
     {
       title: "Data Science & AI",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Developing highly scalable production ready models for various deeplearning and statistical use cases",
-        "⚡ Experience of working with Computer Vision and NLP projects",
-        "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis",
+        "⚡ Drives continuous innovation by developing scalable solutions that align with modern industry demands",
+        "⚡ Experience working with programming methodologies and paradigms in projects",
+        "⚡ Leveraging emerging technologies and best practices to enhance scalability, performance, and business insights",
       ],
       softwareSkills: [
+        {
+          skillName: "C++",
+          fontAwesomeClassname: "simple-icons:cplusplus", // logos-tensorflow
+          style: {
+            backgroundColor: "transparent",
+            color: "#00599C",
+          },
+        },
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "ion-logo-python",
+          style: {
+            backgroundColor: "transparent",
+            color: "#3776AB",
+          },
+        },
+        {
+          skillName: "Java",
+          fontAwesomeClassname: "logos-java",
+          style: {
+            backgroundColor: "transparent",
+            color: "#f89820",
+          },
+        },
+        {
+          skillName: "C#",
+          fontAwesomeClassname: "simple-icons:csharp",
+          style: {
+            backgroundColor: "transparent",
+            color: "#9179E4",
+          },
+        },
+        {
+          skillName: "Ruby",
+          fontAwesomeClassname: "simple-icons:ruby",
+          style: {
+            backgroundColor: "transparent",
+            color: "#CC342D",
+          },
+        },
+        {
+          skillName: "R",
+          fontAwesomeClassname: "simple-icons:r",
+          style: {
+            backgroundColor: "transparent",
+            color: "#276DC3",
+          },
+        },
+        /*
         {
           skillName: "Tensorflow",
           fontAwesomeClassname: "logos-tensorflow",
@@ -117,27 +190,39 @@ const skills = {
             backgroundColor: "transparent",
           },
         },
-        {
-          skillName: "Python",
-          fontAwesomeClassname: "ion-logo-python",
-          style: {
-            backgroundColor: "transparent",
-            color: "#3776AB",
-          },
-        },
+        */
         {
           skillName: "Deeplearning",
-          imageSrc: "deeplearning_ai_logo.png",
+
+          // For changing imageSrc, add/change img in public/skills folder
+          // Remove the fontAwesomeClassName property or leave it empty
+          imageSrc: "deeplearning_ai_logo.png", // Red
+          // imageSrc: "deeplearning_ai_logo2.png",   // Black
+
+          // fontAwesomeClassName property does nothing with ""
+          fontAwesomeClassname: "",
+
+          // You can use the style property to customize an img
+          style: {
+            // backgroundColor: "white",
+            // color: "#F65B66",
+          },
         },
       ],
     },
     {
-      title: "Full Stack Development",
+      // title: "Full Stack Development",
+      title: "Web Developer",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive website front end using React-Redux",
-        "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "⚡ Creating application backend in Node, Express & Flask",
+        // Front-End Proficiency
+        "⚡ Creating refined, responsive interfaces by using HTML5, CSS3, JavaScript, jQuery, Ajax, Bootstrap, Sass, and Tailwind CSS",
+
+        // Full-Stack Development
+        "⚡ Developing dynamic web applications using ReactJS, NodeJS, and Express, with efficient data handling via JSON and RESTful API/services",
+
+        // Optimized Workflow
+        "⚡ Utilizing Postman, NPM, and Yarn to ensure robust testing, seamless dependency management, and streamlined workflows",
       ],
       softwareSkills: [
         {
@@ -155,10 +240,10 @@ const skills = {
           },
         },
         {
-          skillName: "Sass",
-          fontAwesomeClassname: "simple-icons:sass",
+          skillName: "Tailwind CSS",
+          fontAwesomeClassname: "simple-icons:tailwindcss",
           style: {
-            color: "#CC6699",
+            color: "#06B6D4",
           },
         },
         {
@@ -167,6 +252,13 @@ const skills = {
           style: {
             backgroundColor: "#000000",
             color: "#F7DF1E",
+          },
+        },
+        {
+          skillName: "jQuery",
+          fontAwesomeClassname: "simple-icons:jquery",
+          style: {
+            color: "#0769AD",
           },
         },
         {
@@ -191,12 +283,34 @@ const skills = {
           },
         },
         {
+          skillName: "Bootstrap",
+          fontAwesomeClassname: "simple-icons:bootstrap",
+          style: {
+            color: "#7952B3",
+          },
+        },
+        {
+          skillName: "Postman",
+          fontAwesomeClassname: "simple-icons:postman",
+          style: {
+            color: "#FF6C37",
+          },
+        },
+        {
           skillName: "Yarn",
           fontAwesomeClassname: "simple-icons:yarn",
           style: {
             color: "#2C8EBB",
           },
         },
+        {
+          skillName: "Sass",
+          fontAwesomeClassname: "simple-icons:sass",
+          style: {
+            color: "#CC6699",
+          },
+        },
+        /*
         {
           skillName: "Gatsby",
           fontAwesomeClassname: "simple-icons:gatsby",
@@ -211,19 +325,21 @@ const skills = {
             color: "#02569B",
           },
         },
+        */
       ],
     },
     {
-      title: "Cloud Infra-Architecture",
+      // title: "Cloud Infra-Architecture",
+      title: "Cloud Stack Foundation",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working on multiple cloud platforms",
-        "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
-        "⚡ Deploying deep learning models on cloud to use on mobile devices",
-        "⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+        "⚡ Design and deploy adaptable cloud solutions using Microsoft Azure and Heroku",
+        "⚡ Building flexible, high-performance databases with MySQL and PostgreSQL",
+        "⚡ Leverages Docker for efficient and reliable containerization",
+        "⚡ Optimize cloud architectures for peak performance, security, and scalability",
       ],
       softwareSkills: [
-        {
+        /*{
           skillName: "GCP",
           fontAwesomeClassname: "simple-icons:googlecloud",
           style: {
@@ -236,7 +352,7 @@ const skills = {
           style: {
             color: "#FF9900",
           },
-        },
+        },*/
         {
           skillName: "Azure",
           fontAwesomeClassname: "simple-icons:microsoftazure",
@@ -245,24 +361,17 @@ const skills = {
           },
         },
         {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
+          skillName: "Heroku",
+          fontAwesomeClassname: "simple-icons:heroku",
           style: {
-            color: "#FFCA28",
+            color: "#430098",
           },
         },
         {
-          skillName: "PostgreSQL",
-          fontAwesomeClassname: "simple-icons:postgresql",
+          skillName: "MySQL",
+          fontAwesomeClassname: "simple-icons:mysql",
           style: {
-            color: "#336791",
-          },
-        },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#47A248",
+            color: "#4479A1",
           },
         },
         {
@@ -273,35 +382,63 @@ const skills = {
           },
         },
         {
+          skillName: "PostgreSQL",
+          fontAwesomeClassname: "simple-icons:postgresql",
+          style: {
+            color: "#336791",
+          },
+        },
+        /*{
+          skillName: "Firebase",
+          fontAwesomeClassname: "simple-icons:firebase",
+          style: {
+            color: "#FFCA28",
+          },
+        },
+        {
+          skillName: "MongoDB",
+          fontAwesomeClassname: "simple-icons:mongodb",
+          style: {
+            color: "#47A248",
+          },
+        },
+        {
           skillName: "Kubernetes",
           fontAwesomeClassname: "simple-icons:kubernetes",
           style: {
             color: "#326CE5",
           },
-        },
+        },*/
       ],
     },
     {
       title: "UI/UX Design",
       fileName: "DesignImg",
       skills: [
-        "⚡ Designing highly attractive user interface for mobile and web applications",
-        "⚡ Customizing logo designs and building logos from scratch",
-        "⚡ Creating the flow of application functionalities to optimize user experience",
+        "⚡ Designing highly attractive user interfaces for mobile and web applications using Miro, Adobe, and Gimp",
+        "⚡ Customizing logos and building brand identities from ideation to production",
+        "⚡ Create logical application flows to optimize user experience and drive engagement",
       ],
       softwareSkills: [
         {
-          skillName: "Adobe XD",
-          fontAwesomeClassname: "simple-icons:adobexd",
+          skillName: "Miro",
+          fontAwesomeClassname: "simple-icons:miro",
           style: {
-            color: "#FF2BC2",
+            color: "#050038",
           },
         },
         {
-          skillName: "Figma",
-          fontAwesomeClassname: "simple-icons:figma",
+          skillName: "Gimp",
+          fontAwesomeClassname: "simple-icons:gimp",
           style: {
-            color: "#F24E1E",
+            color: "#5C5543",
+          },
+        },
+        {
+          skillName: "Adobe Photoshop",
+          fontAwesomeClassname: "simple-icons:adobephotoshop",
+          style: {
+            color: "#31A8FF",
           },
         },
         {
@@ -312,37 +449,141 @@ const skills = {
           },
         },
         {
+          skillName: "Adobe InDesign",
+          fontAwesomeClassname: "simple-icons:adobeindesign",
+          style: {
+            color: "#E749A0",
+          },
+        },
+        {
+          skillName: "Adobe Acrobat",
+          imageSrc: "adobeacrobat_logo.png",
+          fontAwesomeClassname: "",
+          style: {
+            // color: "#F40F02",
+          },
+        },
+        {
+          skillName: "Adobe Flash",
+          imageSrc: "adobeflash_pro_logo.png",
+          fontAwesomeClassname: "",
+          style: {
+            // color: "#CF302A",
+          },
+        },
+        {
+          skillName: "Adobe Express",
+          imageSrc: "adobeexpress_logo.png",
+          fontAwesomeClassname: "",
+          style: {
+            // color: "#FF0000",
+          },
+        },
+        {
+          skillName: "Adobe XD",
+          fontAwesomeClassname: "simple-icons:adobexd",
+          style: {
+            color: "#FF2BC2",
+          },
+        },
+        /*
+        {
+          skillName: "Figma",
+          fontAwesomeClassname: "simple-icons:figma",
+          style: {
+            color: "#F24E1E",
+          },
+        },
+        {
           skillName: "Inkscape",
           fontAwesomeClassname: "simple-icons:inkscape",
           style: {
             color: "#000000",
           },
         },
+        */
       ],
     },
   ],
 };
 
 // Education Page
+// -----------------------------------------------------------------------------------------------------------------------------
+// profileLink: [Without the comments] - Links to sites are Enabled | [With the comments] - Links to sites are Disabled
 const competitiveSites = {
   competitiveSites: [
     {
+      // Due to "Babbel's logo difficulties, resorted to using Iconify's website as an alterative solution"
+      // Iconify's extensive library of icons is useful for various categories including skills, companies, etc.
+      siteName: "Babbel",
+      iconifyClassname: "vscode-icons:folder-type-www-opened",
+      style: {
+        // backgroundColor: "transparent",
+        // color: "",
+      },
+      // profileLink: "https://www.babbel.com/DanteV/",
+    },
+    {
+      // Resorted to using "logos method" for grabbing Microsoft's logo with built-in color
+      siteName: "Microsoft Learn",
+      iconifyClassname: "logos-microsoft",
+      style: {
+        backgroundColor: "transparent",
+      },
+      // profileLink: "https://learn.microsoft.com/en-us/users/dantevela/",
+    },
+    {
+      siteName: "GeeksforGeeks",
+      iconifyClassname: "simple-icons:geeksforgeeks",
+      style: {
+        color: "#43A047",
+      },
+      // profileLink: "https://www.geeksforgeeks.org/",
+    },
+    {
+      siteName: "FreeCodeCamp (Codefinity)",
+      iconifyClassname: "simple-icons:freecodecamp",
+      style: {
+        color: "#0A0A23",
+      },
+      // profileLink: "https://codefinity.com/layman_brother/",
+    },
+    {
+      siteName: "Coursera",
+      iconifyClassname: "simple-icons:coursera",
+      style: {
+        color: "#0056D2",
+      },
+      // profileLink: "https://coursera.org/layman_brother/",
+    },
+    {
+      siteName: "HubSpot Academy",
+      iconifyClassname: "simple-icons:hubspot",
+      style: {
+        color: "#FF7A59",
+      },
+      // profileLink: "https://www.academy.hubspot.com/layman_brother/",
+    },
+    {
+      // Due to "simplilearn's logo difficulties, resorted to using Iconify's website as an alterative solution"
+      // Iconify's extensive library of icons is useful for various categories including skills, companies, etc.
+      siteName: "simplilearn",
+      iconifyClassname: "vscode-icons:folder-type-www-opened",
+      style: {
+        // backgroundColor: "transparent",
+        // color: "",
+      },
+      // profileLink: "https://www.simplilearn.com/layman_brother/",
+    },
+    /*{
       siteName: "LeetCode",
       iconifyClassname: "simple-icons:leetcode",
       style: {
         color: "#F79F1B",
       },
-      profileLink: "https://leetcode.com/layman_brother/",
-    },
-    {
-      siteName: "HackerRank",
-      iconifyClassname: "simple-icons:hackerrank",
-      style: {
-        color: "#2EC866",
-      },
-      profileLink: "https://www.hackerrank.com/layman_brother",
-    },
-    {
+      // profileLink: "https://leetcode.com/layman_brother/",
+    },*/
+    /*{
       siteName: "Codechef",
       iconifyClassname: "simple-icons:codechef",
       style: {
@@ -359,6 +600,14 @@ const competitiveSites = {
       profileLink: "http://codeforces.com/profile/layman_brother",
     },
     {
+      siteName: "HackerRank",
+      iconifyClassname: "simple-icons:hackerrank",
+      style: {
+        color: "#2EC866",
+      },
+      // profileLink: "https://www.hackerrank.com/layman_brother",
+    },
+    {
       siteName: "Hackerearth",
       iconifyClassname: "simple-icons:hackerearth",
       style: {
@@ -373,44 +622,235 @@ const competitiveSites = {
         color: "#20BEFF",
       },
       profileLink: "https://www.kaggle.com/laymanbrother",
-    },
+    },*/
   ],
 };
 
+// Education Page - [Degrees Section]
 const degrees = {
   degrees: [
     {
-      title: "Indian Institute of Information Technology Kurnool",
-      subtitle: "B.Tech. in Computer Engineering",
-      logo_path: "iiitk_logo.png",
-      alt_name: "IIITDM Kurnool",
-      duration: "2016 - 2020",
+      title: "The University of Texas Rio Grande Valley",
+      subtitle: "Bachelors of Science in Computer Science",
+      logo_path: "utrgv_logo.png",
+      alt_name: "UTRGV",
+      duration: "2019 - 2021",
       descriptions: [
-        "⚡ I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.",
-        "⚡ Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.",
-        "⚡ I was selected for Merit cum Means Scholarship which is given to top 10% of students in college. I have received award from respected director for consistently best performance in academics.",
+        "⚡ At UTRGV, I mastered a comprehensive range of computer science disciplines - including algorithms, automata, computer networks, assembly language, and software engineering - while also honing my skills in data science, internet programming, and technical communication.",
+        "⚡ Completed an intensive series of readings in philosophy and technological ethics, cultivating a nuanced perspective on the ethical challenges in today's tech landscape.",
+        "⚡ Over 3 consecutive years, I have earned the prestigious recognition in being on the Presidents List, demonstrating my steadfast commitment to academic excellence.",
+        "⚡ During my time at university, I formed study groups and provided peer tutoring across diverse coursework, fostering a collaborative environment for academic success.",
+        "⚡ During the COVID-19 pandemic, UTRGV transitioned to remote learning while enforcing strict safety protocols for necessary on-site interactions.",
       ],
-      website_link: "http://iiitk.ac.in",
+      website_link: "https://www.utrgv.edu/",
     },
     {
-      title: "Indiana University Bloomington",
-      subtitle: "M.S. in Computer Science",
-      logo_path: "iu_logo.png",
-      alt_name: "Indiana University Bloomington",
-      duration: "2021 - 2023",
+      title: "South Texas College",
+      subtitle: "Associate of Science in Engineering",
+      logo_path: "stc_logo.png",
+      alt_name: "STC",
+      duration: "2016 - 2019",
       descriptions: [
-        "⚡ I have taken varity of courses related to Artificial Intelligence which correspond to Explainable AI, Graph Machine Learning, Computer Vision etc.",
-        "⚡ Apart from this, I have also done research assistantship. As part of it, I have worked on creating new algorithms in Graph ML and Network Science.",
-        "⚡ During my time at university, I was also associated with multimedia department. As part of it, I have worked on some documentry films and interviews.",
+        "⚡ At STC, I pursued an interdisciplinary curriculum spanning Art, History, Composition, Calculus, Electrical Circuits, Digital Systems, Physics, and Programming Fundamentals, cultivating a versatile blend of creative and analytical expertise.",
+        "⚡ Completed an intensive series of readings in philosophy and technological ethics, cultivating a nuanced perspective on the ethical challenges in today's tech landscape.",
+        "⚡During my time at college, I formed study groups and provided peer tutoring across diverse coursework, fostering a collaborative environment for academic success.",
       ],
-      website_link: "https://www.indiana.edu/",
+      website_link: "https://www.southtexascollege.edu/",
+    },
+    {
+      title:
+        "Business, Education, Technology, Academy (BETA): AKA [World Scholars]",
+      subtitle: "High School Diploma",
+      logo_path: "beta_logo.png",
+      alt_name: "BETA",
+      duration: "2012 - 2016",
+      descriptions: [
+        "⚡ At STISD, I completed rigorous courses in Animation, Computer Maintenance, Digital Interactive Media (DIM), Principles of Information Technology, Research in IT Solutions, and Web Tech, building a comprehensive blend of technical expertise and creative innovation.",
+        "⚡ During my Information Technology Internship, I installed and maintained computer systems to minimize downtime, resolved network issues to enhance connectivity, managed equipment inventory, collaborated with staff and clients to deliver tailored technical solutions while supporting diverse projects.",
+        "⚡ From 2012-2016, as a dedicated member of the Technology Student Association, I excelled in innovation and coding competitions by securing first place in two regionals (2015-2016), demonstrating strong proficiency in web development using HTML, CSS, and leadership.",
+      ],
+      website_link: "https://worldscholars.stisd.net/",
     },
   ],
 };
 
+// Education Page - [Certifications Section]
+// -----------------------------------------------------------------------------------------------------------------------------
+// When a certificate is clicked, the "certificate_link" takes you to the LinkedIn website
+// The "certificate_link" can be replaced with the actual certificate link directly
 const certifications = {
   certifications: [
     {
+      title: "Develop AI Solutions with Azure OpenAI and Semantic Kernel",
+      subtitle: "- Satya Narayana Nadella",
+      logo_path: "microsoft_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Microsoft Learn",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "President's List Recognition (2020)",
+      subtitle: "- Guy Bailey",
+      logo_path: "utrgv_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "UTRGV",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "President's List Recognition (2016)",
+      subtitle: "- BETA (AKA World Scholars)",
+      logo_path: "beta_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "BETA",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Microsoft Technology Associate: Networking Fundamentals",
+      subtitle: "- Satya Nadella",
+      logo_path: "microsoft_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Microsoft Technology Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Microsoft Technology Associate: Security Fundamentals",
+      subtitle: "- Satya Nadella",
+      logo_path: "microsoft_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Microsoft Technology Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title:
+        "Microsoft Technology Associate: Windows Operating System Fundamentals",
+      subtitle: "- Satya Nadella",
+      logo_path: "microsoft_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Microsoft Technology Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title:
+        "Microsoft Technology Associate: Windows Server Administration Fundamentals",
+      subtitle: "- Satya Nadella",
+      logo_path: "microsoft_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Microsoft Technology Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Microsoft Office Specialist",
+      subtitle: "- Satya Nadella",
+      logo_path: "microsoft_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Microsoft Office Specialist",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Graphic Design & Illustration Using Adobe Illustrator",
+      subtitle: "- Shantanu Narayen",
+      logo_path: "adobe_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Adobe Certified Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Interactive Media using Adobe Flash Professional",
+      subtitle: "- Shantanu Narayen",
+      logo_path: "adobe_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Adobe Certified Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Print & Digital Media Publication Using Adobe InDesign",
+      subtitle: "- Shantanu Narayen",
+      logo_path: "adobe_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Adobe Certified Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Rich Media Communication using Adobe Flash CS6",
+      subtitle: "- Shantanu Narayen",
+      logo_path: "adobe_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Adobe Certified Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Visual Communication Using Adobe Photoshop CS5",
+      subtitle: "- Shantanu Narayen",
+      logo_path: "adobe_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Adobe Certified Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Visual Communication Using Adobe Photoshop CS6",
+      subtitle: "- Shantanu Narayen",
+      logo_path: "adobe_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Adobe Certified Associate",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "CIW Internet Business Associate",
+      subtitle: "- Lisa Harnish",
+      logo_path: "CIW_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Certified Internet Web Professional",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "CIW Network Technology Associate",
+      subtitle: "- Lisa Harnish",
+      logo_path: "CIW_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Certified Internet Web Professional",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "CIW Site Development Associate",
+      subtitle: "- Lisa Harnish",
+      logo_path: "CIW_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "Certified Internet Web Professional",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "IC3 GS3",
+      subtitle: "- Dr. Gary Gates",
+      logo_path: "IC3_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "IC3 GS3",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "IC3 GS4 - Computing Fundamentals",
+      subtitle: "- Certiport",
+      logo_path: "IC3_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "IC3 GS4",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "IC3 GS4 - Key Applications",
+      subtitle: "- Certiport",
+      logo_path: "IC3_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "IC3 GS4",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "IC3 GS5 - Key Applications",
+      subtitle: "- Certiport",
+      logo_path: "IC3_logo.png",
+      certificate_link: "https://www.linkedin.com/in/dante-vela-544284192",
+      alt_name: "IC3 GS5",
+      color_code: "#FFFFFF",
+    },
+    /*{
       title: "Machine Learning",
       subtitle: "- Andrew Ng",
       logo_path: "stanford_logo.png",
@@ -517,16 +957,18 @@ const certifications = {
         "https://google.qwiklabs.com/public_profiles/5fab4b2d-be6f-408c-8dcb-6d3b58ecb4a2",
       alt_name: "GCP",
       color_code: "#4285F499",
-    },
+    },*/
   ],
 };
 
 // Experience Page
+// -----------------------------------------------------------------------------------------------------------------------------
+// !!!***This webpage needs to be maintained as more experience is gained through multiple job positions and etc***!!!
 const experience = {
   title: "Experience",
   subtitle: "Work, Internship and Volunteership",
   description:
-    "I have worked with many evolving startups as ML and DL Developer, Designer and Software Architect. I have also worked with some well established companies mostly as AI Developer. I love organising events and that is why I am also involved with many opensource communities as a representative.",
+    "Driven by a lifelong passion for technology, I thrive at the intersection of full-stack web development, AI innovation, and IT support-delivering innovative, user-centric solutions with a steadfast commitment to communication, collaboration, time management, critical thinking, attention to detail, problem solving, and accountability.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -534,6 +976,23 @@ const experience = {
       work: true,
       experiences: [
         {
+          title: "Independent Online Seller",
+          company: "Independent Online Seller",
+
+          // Various sites were used to sell products or services
+          // company_url: "https://www.tiktok.com/en/",
+
+          // There is no logo or brand as a Online Independent Seller -> yet...
+          // Placeholder logo is used for now... only temporary
+          // !!!***Must find and use family logo possibly or make own logo in future***!!!
+          logo_path: "bestseller_logo.png",
+          duration: "June 2016 - Present",
+          location: "Remote, TX, USA",
+          description:
+            "Provided online customer service to clients across e-commerce platforms ensuring customer satisfaction; marketed and sold products by effectively managing inventory, pricing, promotions, while improving financial tracking efficiency through a USB-based filing system integrated with spreadsheets.",
+          color: "#000000",
+        },
+        /*{
           title: "Machine Learning Engineer",
           company: "TikTok Inc.",
           company_url: "https://www.tiktok.com/en/",
@@ -576,13 +1035,25 @@ const experience = {
           description:
             "FreeCopy is the Start up from Indian Institute of Management, Ahmedabad. I have changed the integration of the whole app from Google to Firebase. I learnt the efﬁcient ways of Data communications like Retroﬁt, Eventbus etc. I experienced the real time start up. I learnt the Design thinking of UI on perspective of People.",
           color: "#fc1f20",
-        },
+        },*/
       ],
     },
     {
       title: "Internships",
       experiences: [
         {
+          title: "Information Technology Intern",
+          company:
+            "Business, Education, Technology, Academy (BETA) - AKA World Scholars",
+          company_url: "https://worldscholars.stisd.net/",
+          logo_path: "beta_logo.png",
+          duration: "Jan 2016 - May 2016",
+          location: "On-Site, Edinburg TX, USA",
+          description:
+            "Experienced IT professional proficient in installing, maintaining, and troubleshooting computer systems and networks to minimize downtime, while managing inventories and collaborating with staff, clients, and management to implement tailored technical solutions.",
+          color: "#0071C5",
+        },
+        /*{
           title: "Machine Learning Intern",
           company: "TikTok Inc.",
           company_url: "https://www.tiktok.com/en/",
@@ -615,13 +1086,25 @@ const experience = {
           description:
             "This is financial Solution Company. I have made Supervised Learning model for the company which can perform time series analysis on Stock price data for 32 companies. I have built LSTM Neural Networks Model and trained the data of 32 companies for last 2 years. This model is also used for forecasting.",
           color: "#0071C5",
-        },
+        },*/
       ],
     },
     {
       title: "Volunteerships",
       experiences: [
         {
+          title: "Technology Student Association (TSA) Club Member",
+          company:
+            "Business, Education, Technology, Academy (BETA) - AKA World Scholars",
+          company_url: "https://worldscholars.stisd.net/",
+          logo_path: "tsa_logo.png",
+          duration: "Jan 2012 - Jan 2016",
+          location: "On-Site, Edinburg TX, USA",
+          description:
+            "Innovative web developer with HTML/CSS expertise, recognized for securing first place in two regional coding competitions (2015, 2016) and excelling in collaborative innovation challenges.",
+          color: "#0C9D58",
+        },
+        /*{
           title: "Google Explore ML Facilitator",
           company: "Google",
           company_url: "https://about.google/",
@@ -676,29 +1159,79 @@ const experience = {
           description:
             "I am actively contributing to many opensource projects. I have contributed to projects of organisations like Tensorflow, Uber, Facebook, Google, Scikit-learn, Kiwix, Sympy, Python, NVLabs, Fossasia, Netrack, Keras etc. These contributions include bug fixes, feature requests and formulating proper documentation for project.",
           color: "#181717",
-        },
+        },*/
       ],
     },
   ],
 };
 
-// Projects Page
+// Projects Page | [Open Source Page] uses the same data as [Projects Page] but mainly focuses on GitHub Projects
+// -----------------------------------------------------------------------------------------------------------------------------
+// For GitHub Projects, use "node git_data_fetcher.mjs" to update the data from a GitHub account
+// Within the scope of "src/shared/opensource" JSON files is the data that is fetched from GitHub
+// Make sure the ".env" file has your GitHub Token and GitHub Username for OAuth (Treat it like a password)
+// -----------------------------------------------------------------------------------------------------------------------------
+// Within the scope of "src/pages/projects", the "Projects.js" file contains the Text for Buttons in the [Projects Page]
+// To change the text, look for details like "btn-div" and "<Button/>" to find the text that needs to be changed
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
+    "My skills leverage a diverse array of cutting-edge technologies, building cloud-based data science projects, responsive websites, optimized databases, and intuitive Java GUI applications-while adeptly managing ecommerce operations, game development initiatives, and project coordination.",
   avatar_image_path: "projects_image.svg",
 };
 
+// Projects Page - [Publication Header Section]
 const publicationsHeader = {
   title: "Publications",
-  description: "Some of my published Articles, Blogs and Research.",
+  description:
+    "My collection of Articles, Blogs, Readings, and Research that showcase my expertise and innovative insights.",
   avatar_image_path: "projects_image.svg",
 };
 
+// Projects Page - [Publications Section]
+// -----------------------------------------------------------------------------------------------------------------------------
+// When a publication article is clicked, the "url" takes the user directly to the publication
 const publications = {
   data: [
     {
+      id: "the-13-layout-sins",
+      name: "The 13 Layout Sins (Reading)",
+      createdAt: "10-02-2019T00:00:00Z",
+      description:
+        "How to revise Written Instructions as well as provide feedback to group members.",
+      url:
+        "https://eng307pack.wordpress.com/wp-content/uploads/2012/12/layout-sins.pdf",
+    },
+    {
+      id: "shitty-first-drafts-anne-lamott",
+      name: "Shitty First Drafts by Anne Lamott (Reading)",
+      createdAt: "09-11-2019T00:00:00Z",
+      description:
+        "To accept first drafts of assignments/projects regardless of status, always improve.",
+      url:
+        "https://jlserna1125.wordpress.com/wp-content/uploads/2013/07/shitty_drafts_2_-1.pdf",
+    },
+    {
+      id:
+        "rhetoric-making-sense-of-human-interaction-and-meaning-making-doug-downs",
+      name:
+        "Rhetoric: Making Sense of Human Interaction and Meaning-Making by Doug Downs (Reading/Discussion)",
+      createdAt: "09-04-2019T00:00:00Z",
+      description:
+        "Pairing article excerpts with dynamic visuals & a #hashtag capturing the core message.",
+      url:
+        "https://dougdownsteaching.wordpress.com/wp-content/uploads/2018/01/downs-rhetoric.pdf",
+    },
+    {
+      id: "layered-literacies-cook-kelli-cargile",
+      name: "Layered Literacies by Cook, Kelli Cargile (Reading/Discussion)",
+      createdAt: "08-28-2019T00:00:00Z",
+      description:
+        "The six layered literacies of technical communication and how its used in the world or professionally.",
+      url:
+        "https://engl775f15.wordpress.com/wp-content/uploads/2015/10/cargile-cook-layered-literacies.pdf",
+    },
+    /*{
       id: "neuro-symbolic-sudoku-solver",
       name: "Neuro-Symbolic Sudoku Solver",
       createdAt: "2023-07-02T00:00:00Z",
@@ -718,26 +1251,36 @@ const publications = {
       createdAt: "2023-10-12T00:00:00Z",
       description: "Blog published in Paperspace",
       url: "https://blog.paperspace.com/consistency-models/",
-    },
+    },*/
   ],
 };
 
 // Contact Page
+// -----------------------------------------------------------------------------------------------------------------------------
+// Within the scope of "src/pages/contact", the "ContactComponent.js" file contains the Text for Buttons in the [Contact Page]
+// To change the text, look for details like "btn-div" and "<Button/>" to find the text that needs to be changed
 const contactPageData = {
   contactSection: {
-    title: "Contact Me",
-    profile_image_path: "animated_ashutosh.png",
+    title: "Connect with Me",
+    profile_image_path: "Self_Portrait.png",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, React, Android, Cloud and Opensource Development.",
+      "I'm available nearly every day. You can contact me thru email, message, phone call, or social media. Expect responses within 48 hours.",
   },
   blogSection: {
-    title: "Blogs",
+    title: "Documentation",
     subtitle:
-      "I like to document some of my experiences in professional career journey as well as some technical knowledge sharing.",
-    link: "https://blogs.ashutoshhathidara.com/",
+      "I like to document my experiences and share some technical knowledge in a detailed step-by-step process for easy learning.",
+    link: "https://www.linkedin.com/in/dante-vela-544284192",
+    // link: "https://blogs.ashutoshhathidara.com/", (Blog/Blogsite)
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {
+    title: "Contact Information",
+    subtitle: "You can reach me at (956) 404-5085 or at dante.vela@outlook.com",
+    avatar_image_path: "address_image.svg",
+    location_map_link: "mailto:dante.vela@outlook.com",
+  },
+  /*addressSection: {
     title: "Address",
     subtitle: "Saratoga Ave, San Jose, CA, USA 95129",
     locality: "San Jose",
@@ -747,7 +1290,7 @@ const contactPageData = {
     streetAddress: "Saratoga Avenue",
     avatar_image_path: "address_image.svg",
     location_map_link: "https://maps.app.goo.gl/NvYZqa34Wye4tpS17",
-  },
+  },*/
   phoneSection: {
     title: "",
     subtitle: "",

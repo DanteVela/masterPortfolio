@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+// ${openSource.githubUserName} = GitHub Username
+// GitHub Token = Token generated from GitHub account
 const openSource = {
   githubConvertedToken: process.env.GITHUB_TOKEN,
   githubUserName: process.env.GITHUB_USERNAME,
@@ -101,13 +103,13 @@ const query_org = {
 
 const query_pinned_projects = {
   query: `
-	query { 
+	query {
 	  user(login: "${openSource.githubUserName}") { 
 	    pinnedItems(first: 6, types: REPOSITORY) {
 	      totalCount
 	      nodes{
 	        ... on Repository{
-	          id
+	            id
 		          name
 		          createdAt,
 		          url,
@@ -260,7 +262,9 @@ const languages_icons = {
   Rust: "logos-rust",
 };
 
-fetch(baseUrl, {
+// Old Pinned Projects Fetching Code
+// [Pinned Projects 2 Error]
+/*fetch(baseUrl, {
   method: "POST",
   headers: headers,
   body: JSON.stringify(query_pinned_projects),
@@ -268,7 +272,11 @@ fetch(baseUrl, {
   .then((response) => response.text())
   .then((txt) => {
     const data = JSON.parse(txt);
-    // console.log(txt);
+    console.log(txt);
+    if (data.errors) {
+      console.log("GitHub API errors:", JSON.stringify(data.errors));
+      throw new Error("GitHub API returned errors");
+    }
     const projects = data["data"]["user"]["pinnedItems"]["nodes"];
     var newProjects = { data: [] };
     for (var i = 0; i < projects.length; i++) {
@@ -285,6 +293,65 @@ fetch(baseUrl, {
       }
       obj["languages"] = newLangobjs;
       newProjects["data"].push(obj);
+    }
+
+    console.log("Fetching the Pinned Projects Data.\n");
+    fs.writeFile(
+      "./src/shared/opensource/projects.json",
+      JSON.stringify(newProjects),
+      function (err) {
+        if (err) {
+          console.log(
+            "Error occured in pinned projects 1",
+            JSON.stringify(err)
+          );
+        }
+      }
+    );
+  })
+  .catch((error) =>
+    console.log("Error occured in pinned projects 2", JSON.stringify(error))
+  );*/
+
+  fetch(baseUrl, {
+  method: "POST",
+  headers: headers,
+  body: JSON.stringify(query_pinned_projects),
+})
+  .then((response) => response.text())
+  .then((txt) => {
+    console.log("Pinned projects raw response:", txt); // See the real API response
+    let data;
+    try {
+      data = JSON.parse(txt);
+    } catch (e) {
+      console.log("Failed to parse JSON:", e);
+      throw e;
+    }
+    if (data.errors) {
+      console.log("GitHub API errors:", JSON.stringify(data.errors));
+      throw new Error("GitHub API returned errors");
+    }
+    if (!data.data || !data.data.user || !data.data.user.pinnedItems) {
+      console.log("Pinned projects: Missing user or pinnedItems in response");
+      throw new Error("Pinned projects: Missing user or pinnedItems in response");
+    }
+    const projects = data.data.user.pinnedItems.nodes;
+    var newProjects = { data: [] };
+    for (var i = 0; i < projects.length; i++) {
+      var obj = projects[i];
+      var langobjs = obj.languages.nodes;
+      var newLangobjs = [];
+      for (var j = 0; j < langobjs.length; j++) {
+        if (langobjs[j].name in languages_icons) {
+          newLangobjs.push({
+            name: langobjs[j].name,
+            iconifyClass: languages_icons[langobjs[j].name],
+          });
+        }
+      }
+      obj.languages = newLangobjs;
+      newProjects.data.push(obj);
     }
 
     console.log("Fetching the Pinned Projects Data.\n");
