@@ -30,7 +30,7 @@ const greeting = {
     "A software engineer specializing in website development who combines innovative design with robust coding practices to build secure, responsive, and user-centric digital experiences.",
   resumeLink:
     // When the [See my Resume] Button is clicked in the [Contact Me] Page, it will take the user to the Resume
-    "https://1drv.ms/b/c/7604ad3657907d92/EURpaZg0X0RGhK_vGdVEcEEBu2S89HFxF70qzKOGNsoLsA?e=layZOJ",
+    "https://1drv.ms/b/c/7604ad3657907d92/EURpaZg0X0RGhK_vGdVEcEEBAniqjtwMMdaD-7-sUq2F9Q?e=078MrE",
   // "https://drive.google.com/file/d/1bXRknv_h-XI_3CQ3SGPteGODtvEb7YvI/view?usp=sharing",
   portfolio_repository: "https://github.com/DanteVela/masterPortfolio",
   githubProfile: "https://github.com/DanteVela",
