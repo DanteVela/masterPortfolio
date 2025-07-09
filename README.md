@@ -111,8 +111,8 @@ You will find `git_data_fetcher.mjs` file in the main directory of the repositor
 In the project you will see a `env.example` file, create a new file named `.env` and copy contents of `env.example` into it. In that file, you will see the following environment variables
 
 ```javascript
-GITHUB_TOKEN = your_token;
-GITHUB_USERNAME = your_username;
+const GITHUB_TOKEN = "your_token";
+const GITHUB_USERNAME = "your_username";
 ```
 
 You can get a github token as described [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). Give all permissions while generating token. Add your github username and the token generated in `GITHUB_USERNAME` and `GITHUB_TOKEN` variables in the .env file.
