@@ -1,97 +1,31 @@
 {
   "data": [
     {
-      "id": "R_kgDOOjlrFw",
-      "name": "masterPortfolio",
-      "createdAt": "2025-05-02T21:13:29Z",
-      "url": "https://github.com/DanteVela/masterPortfolio",
-      "description": "🔥 The Complete Customizable Software Developer Portfolio Template which lets you showcase your work and provides each and every detail about you as Software Developer.",
-      "isFork": true,
+      "id": "R_kgDOO3Upuw",
+      "name": "DanteVela.github.io",
+      "createdAt": "2025-06-06T17:37:13Z",
+      "url": "https://github.com/DanteVela/DanteVela.github.io",
+      "description": "Deployment Build of masterPortfolio [Special]",
+      "isFork": false,
       "languages": [
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        },
-        {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
-        },
         {
           "name": "HTML",
           "iconifyClass": "logos-html-5"
-        },
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOO2R2bA",
+      "name": "masterPortfolio",
+      "createdAt": "2025-06-05T00:38:54Z",
+      "url": "https://github.com/DanteVela/masterPortfolio",
+      "description": "🔥 The Complete Customizable Software Developer Portfolio Template which lets you showcase your work and provides each and every detail about you as Software Developer.",
+      "isFork": false,
+      "languages": [
         {
           "name": "Dockerfile",
           "iconifyClass": "simple-icons:docker"
-        }
-      ]
-    },
-    {
-      "id": "R_kgDOOiodGQ",
-      "name": "GameDev-FinalGame-CrabRave",
-      "createdAt": "2025-05-01T01:52:41Z",
-      "url": "https://github.com/DanteVela/GameDev-FinalGame-CrabRave",
-      "description": null,
-      "isFork": false,
-      "languages": []
-    },
-    {
-      "id": "R_kgDONzZakg",
-      "name": "GameJam-FinalGame",
-      "createdAt": "2025-02-03T02:22:43Z",
-      "url": "https://github.com/DanteVela/GameJam-FinalGame",
-      "description": null,
-      "isFork": false,
-      "languages": []
-    },
-    {
-      "id": "R_kgDOOipPbg",
-      "name": "JavaFinalProject-BotW-Recipe-Viewer",
-      "createdAt": "2025-05-01T02:41:37Z",
-      "url": "https://github.com/DanteVela/JavaFinalProject-BotW-Recipe-Viewer",
-      "description": null,
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Java",
-          "iconifyClass": "logos-java"
-        }
-      ]
-    },
-    {
-      "id": "R_kgDOOi_8Wg",
-      "name": "SoftwareEngineering-FinalProject-RailsGradeBook",
-      "createdAt": "2025-05-01T18:10:32Z",
-      "url": "https://github.com/DanteVela/SoftwareEngineering-FinalProject-RailsGradeBook",
-      "description": null,
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Ruby",
-          "iconifyClass": "logos:ruby"
         },
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        },
-        {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
-        },
-        {
-          "name": "HTML",
-          "iconifyClass": "logos-html-5"
-        }
-      ]
-    },
-    {
-      "id": "R_kgDOOi_dQA",
-      "name": "SoftwareEngineering-IP-FinalProject",
-      "createdAt": "2025-05-01T17:52:47Z",
-      "url": "https://github.com/DanteVela/SoftwareEngineering-IP-FinalProject",
-      "description": null,
-      "isFork": false,
-      "languages": [
         {
           "name": "JavaScript",
           "iconifyClass": "logos-javascript"
@@ -103,6 +37,66 @@
         {
           "name": "CSS",
           "iconifyClass": "logos-css-3"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOO_JwMQ",
+      "name": "Python-Learning-Grounds",
+      "createdAt": "2025-06-20T18:31:36Z",
+      "url": "https://github.com/DanteVela/Python-Learning-Grounds",
+      "description": "A comprehensive collection of tutorials and hands-on exercises to support both my own growth and that of fellow Python developers.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOO5llgw",
+      "name": "PHP-Learning-Grounds",
+      "createdAt": "2025-06-11T01:34:06Z",
+      "url": "https://github.com/DanteVela/PHP-Learning-Grounds",
+      "description": "A hands-on PHP learning hub with tutorials, code examples, and mini-projects to guide you from syntax basics to modern web development best practices.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "PHP",
+          "iconifyClass": "logos-php"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOO-D11A",
+      "name": "Voice-Assistant-Python",
+      "createdAt": "2025-06-18T22:10:12Z",
+      "url": "https://github.com/DanteVela/Voice-Assistant-Python",
+      "description": "A repository of a speech-driven virtual assistant powered by Speech Recognition for voice input, pyttsx3 for text-to-speech, Pywhatkit and webbrowser for web tasks, plus Wikipedia lookups and programmer jokes via pyjokes.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOPIcNBA",
+      "name": "Predicting-Winning-Numbers",
+      "createdAt": "2025-07-07T15:11:43Z",
+      "url": "https://github.com/DanteVela/Predicting-Winning-Numbers",
+      "description": "Machine learning models that are trained on using historical data to predict the future.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
         }
       ]
     }

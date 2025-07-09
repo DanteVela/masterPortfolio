@@ -1,8 +1,46 @@
+// This script fetches data from GitHub using the GraphQL API and saves it to JSON files.
+
+// If you are using Node.js version 13 or higher, you can use the following line:
+// import "dotenv/config.js"; // This will load the environment variables from the .env file into process.env
+
+// If you are using Node.js version 12 or lower, use the following line instead:
+// import dotenv f; // This will load the environment variables from the .env file into process.env
+
+import "dotenv/config.js"; // Use this to load environment variables from .env file
 import fetch from "node-fetch";
 import fs from "fs";
-import dotenv from "dotenv";
+// -------------------------------------------------------------------------------------------------------------------------------
 
-dotenv.config();
+// To debug the Bad Credentials error (401), we will log the GitHub Username and Token presence:
+/*
+console.log('GITHUB_USERNAME →', process.env.GITHUB_USERNAME);
+console.log('GITHUB_TOKEN present →', !!process.env.GITHUB_TOKEN);
+const header = {
+  'Content-Type': 'application/json',
+  Authorization: `bearer ${process.env.GITHUB_TOKEN}`
+};
+console.log('Auth header →', header.Authorization);
+*/
+
+// If you ever suspect stray whitespace or punctuation, sanitize the GitHub Username and Token:
+// process.env.GITHUB_USERNAME = process.env.GITHUB_USERNAME?.trim();
+// process.env.GITHUB_TOKEN = process.env.GITHUB_TOKEN?.trim();
+// console.log('Sanitized GITHUB_USERNAME →', process.env.GITHUB_USERNAME);
+// console.log('Sanitized GITHUB_TOKEN present →', !!process.env.GITHUB_TOKEN);
+// console.log('Sanitized Auth header →', `bearer ${process.env.GITHUB_TOKEN}`);
+
+// Example of how to use the sanitized GitHub Username and Token in headers:
+/*
+const username = process.env.GITHUB_USERNAME?.trim();
+const token    = process.env.GITHUB_TOKEN?.trim();
+
+const headers = {
+  'Content-Type': 'application/json',
+  Authorization: `bearer ${token}`
+};
+*/
+
+// -------------------------------------------------------------------------------------------------------------------------------
 
 // ${openSource.githubUserName} = GitHub Username
 // GitHub Token = Token generated from GitHub account
